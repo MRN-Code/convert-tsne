@@ -2,6 +2,8 @@ from __future__ import print_function
 
 import json,sys
 
+sys.stderr("running...")
+
 try:
 	def main():
 		with open("convert.json","w") as f:
