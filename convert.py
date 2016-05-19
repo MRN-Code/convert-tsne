@@ -1,15 +1,14 @@
 from __future__ import print_function
+import json
+import sys
 
-import json,sys
-
-sys.stderr("running...")
+sys.stderr.write("running...")
 
 try:
-	def main():
-		with open("convert.json","w") as f:
-			json.dump({"convert":True},f)
+    def main():
+        sys.stdout.write(json.dumps({"convert": True}))
 except:
-	sys.stderr("prcess terminated due to error")
+    sys.stderr.write("prcess terminated due to error")
 
 if __name__ == '__main__':
-	main()
+    main()

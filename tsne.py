@@ -1,17 +1,14 @@
 from __future__ import print_function
+import json
+import sys
 
-import json,sys
-
-sys.stderr("running...")
+sys.stderr.write("running...")
 
 try:
-	def main():
-		with open("tsne.json","w") as f:
-			json.dump({"complete":True},f)
-		with open("tsne.txt","w") as fp:
-			fp.write("tsne done")
+    def main():
+        sys.stdout.write(json.dumps({"tsne": True}))
 except:
-	sys.stderr("Process terminated due to error")
+    sys.stderr.write("Process terminated due to error")
 
 if __name__ == '__main__':
-	main()
+    main()
